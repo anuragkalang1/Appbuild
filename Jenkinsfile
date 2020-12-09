@@ -1,5 +1,5 @@
 node{
-   stage('Hi to Jenkins'){
+   stage('Hi'){
    
    }
    stage('SCM Checkout'){
