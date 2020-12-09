@@ -9,7 +9,7 @@ node{
       // Get maven home path
       def mvnHome =  tool name: 'maven-3', type: 'maven'   
       sh ''' cd /usr/create-war '''
-      mvn clean install
+      sh "mvn clean install"
       }
 }
 
