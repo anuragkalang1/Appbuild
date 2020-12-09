@@ -9,6 +9,7 @@ node{
       // Get maven home path
       def mvnHome =  tool name: 'maven-3', type: 'maven'   
       sh ''' 
+        echo "$PWD"
         mvn validate
         mvn compile
         mvn test
