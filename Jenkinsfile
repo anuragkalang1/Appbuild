@@ -8,7 +8,7 @@ node{
    stage('Compile-Package-create-war-file'){
       // Get maven home path
       def mvnHome =  tool name: 'maven-3', type: 'maven'   
-      sh ''' sudo cd /usr/create-war '''
+      sh ''' cd /usr/create-war '''
       mvn clean install
       }
 }
