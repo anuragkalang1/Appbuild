@@ -8,7 +8,7 @@ node{
    stage('Compile-Package-create-war-file'){
       // Get maven home path
       def mvnHome =  tool name: 'maven-3', type: 'maven'   
-      jar cvf my-app.war
+      mvn package
       }
 }
 
