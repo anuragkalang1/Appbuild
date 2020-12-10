@@ -11,6 +11,10 @@ node{
         mvn compile
         mvn test
         mvn package
+        git add .
+        git commit -m "Pushing the generated target (war file) to the remote repo"
+        git push origin master
+        mvn clean install
         '''
       }
    stage('Configure/Deploy-Ansible'){
