@@ -1,7 +1,4 @@
 node{
-   stage('Hi'){
-     runTask()
-   }
    stage('SCM Checkout'){
      git 'https://github.com/anuragkalang1/Appbuild.git'
    }
@@ -18,10 +15,4 @@ node{
       }
 }
 
-def runTask()
-{
-sh '''
-  echo "Hello"
-  '''
-}
 
