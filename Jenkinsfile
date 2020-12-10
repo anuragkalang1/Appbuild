@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/anuragkalang1/Appbuild.git'
+     git '' //replace your githib url within the quotes
    }
    stage('Compile-Package-create-war-file'){
       // Get maven home path
@@ -13,6 +13,9 @@ node{
         mvn package
         '''
       }
+   stage('Configure/Deploy-Ansible'){
+      sh ''' ansible-playbook warDeploy.yml '''
+   }
 }
 
 
